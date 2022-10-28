@@ -10,8 +10,8 @@
  * Check servie worker.
  */
 if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
+  navigator.serviceWorker.register("/ISC2O-UNIT3-02-VOLUME-OF-A-PYRAMID/sw.js", {
+    scope: "/ISC2O-UNIT3-02-VOLUME-OF-A-PYRAMID/",
   })
 }
 
