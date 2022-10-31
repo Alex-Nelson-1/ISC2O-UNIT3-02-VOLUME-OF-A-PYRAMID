@@ -18,17 +18,15 @@ if (navigator.serviceWorker) {
 
 /* This function calculates a users earnings and displays it */
 function calculateVolume() {
-  
   /* Input */
   const length = parseFloat(document.getElementById("length").value)
   const width = parseFloat(document.getElementById("width").value)
   const height = parseFloat(document.getElementById("height").value)
-  
-  /* Proccess */
-  const volume = length * width * height / 3
- 
-  
-  /* Output */
-  document.getElementById("volume").innerHTML = "The volume of your rectangular pyramid is: " + volume + " cm³"
-}
 
+  /* Proccess */
+  const volume = (length * width * height) / 3
+
+  /* Output */
+  document.getElementById("volume").innerHTML =
+    "The volume of your rectangular pyramid is: " + volume + " cm³"
+}
