@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--- ICS2O-Unit3-02-Volume-of-Pryamid  --->
+<!--- ICS2O-Unit3-02-Volume-of-Pyramid  --->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,7 +8,7 @@
     <meta name="keywords" content="mths, ics2o" />
     <meta name="author" content="Alex Nelson" />
     <meta name="theme-color" content="#FFFFFF" />
-    <title>GitHub page as PWA template</title>
+    <title>Volume of a Pyramid</title>
     <link
       rel="canonical"
       href="https://Alex-Nelson-1.github.io/ISC2O-UNIT3-02-VOLUME-OF-A-PYRAMID/"
@@ -51,31 +51,75 @@
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <script src="./js/script.js"></script>
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-      <header class="mdl-layout__header">
-        <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title">My first PWA</span>
+   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header" style="text-align: center">
+        <div class="mdl-layout-header-row">
+          <span class="mdl-layout__title">Pyramid volume calculator</span>
         </div>
       </header>
       <main class="mdl-layout__content">
-        <p></p>
-        <img
-          src="./images/notebook-animation.svg"
-          alt="Computer"
-          width="25%"
-          height="25%"
-        />
-        <p></p>
-        <!-- Raised button with ripple -->
+        <h1>Formula</h1>
+        <h3>V = (L x W x H) / 2</h3>
+        <img src="./images/nssg6L01.svg" alt="Formula for pyramid volume">
+        <div>Please enter the correct dimensions</div>
+        <form action="#">
+         Length: 
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="length"
+            />
+            <!--This will control the textfields error message and label-->
+            <label class="mdl-textfield__label" for="length"
+              >Length</label
+            >
+            <span class="mdl-textfield__error">Numbers Only!</span>
+          </div>
+        </form>
+        <!--Text field accepts input for hours worked-->
+        <form action="#">
+         Width:
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="width"
+            />
+            <!--This will control the textfields error message and label-->
+            <label class="mdl-textfield__label" for="width"
+              >Width</label
+            >
+            <span class="mdl-textfield__error">Numbers Only!</span>
+          </div>
+        </form>
+        <!--Text field accepts input for hourly wage-->
+        <form action="#">
+          Height:
+          <div class="mdl-textfield mdl-js-textfield">
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              pattern="-?[0-9]*(\.[0-9]+)?"
+              id="height"
+            />
+            <!--This will control the textfields error message and label-->
+            <label class="mdl-textfield__label" for="height"
+              >Height</label
+            >
+            <span class="mdl-textfield__error">Numbers Only!</span>
+          </div>
+        </form>
+        <!-- Accent-colored raised button that controls JS function -->
         <button
-          class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-          onclick="myButtonClicked()"
+          class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent"
+          onclick="calculateVolume()"
         >
-          Say "Hello, World!"
+          Calculate Volume
         </button>
-        <!-- basic text -->
-        <p></p>
-        <div id="hello-world"></div>
+        <div id="volume"></div>
       </main>
     </div>
   </body>

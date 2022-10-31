@@ -1,7 +1,5 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
-//
-// Created by: Mr. Coxall
-// Created on: Sep 2020
+// Created by: Alex Nelson
+// Created on: Oct 2022
 // This file contains the JS functions for index.html
 
 "use strict"
@@ -18,9 +16,19 @@ if (navigator.serviceWorker) {
   )
 }
 
-/**
- * This function displays an alert.
- */
-function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+/* This function calculates a users earnings and displays it */
+function calculateVolume() {
+  
+  /* Input */
+  const length = parseFloat(document.getElementById("length").value)
+  const width = parseFloat(document.getElementById("width").value)
+  const height = parseFloat(document.getElementById("height").value)
+  
+  /* Proccess */
+  const volume = length * width * height / 3
+ 
+  
+  /* Output */
+  document.getElementById("volume").innerHTML = "The volume of your rectangular pyramid is: " + volume + " cm³"
 }
+
